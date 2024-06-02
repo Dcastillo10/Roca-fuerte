@@ -31,16 +31,57 @@ body {
 }
 
 .hero {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2em;
   background-color: #f9f9f9;
+  overflow: hidden;
 }
 
 .hero img {
-  width: 100vw;
-  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.mainImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 2em 0;
+}
+
+.mainImg img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  max-width: 60%;
+  padding: 2em;
+}
+
+.hero .hero-content h1 {
+  font-size: 3em;
+}
+
+.hero .hero-content h1 .highlight {
+  color: red;
+}
+
+.hero .hero-content h2 {
+  font-size: 2em;
+  color: red;
 }
 
 .services {
@@ -62,7 +103,10 @@ body {
 .card {
   width: 22%;
   margin: 1em 0;
+  position: relative;
   text-align: left;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .card img {
@@ -77,5 +121,161 @@ body {
 
 .card p {
   font-size: 1em;
+  color: white;
+}
+
+.card.abarrotes .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.card.abarrotes .overlay h3 {
+  margin: 0;
+}
+
+.card.abarrotes .overlay p {
+  margin: 0.5em 0 0 0;
+  font-size: 0.9em;
+}
+
+.why-us {
+  background-color: #f9f9f9;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.why-us p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 2em;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.benefit {
+  background-color: white;
+  width: 18%;
+  margin: 1em;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-10px);
+}
+
+.benefit h3 {
+  font-size: 2em;
+  color: red;
+  margin-bottom: 0.5em;
+}
+
+.benefit h4 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.benefit p {
+  font-size: 1em;
   color: #555;
+}
+
+.benefit.highlighted {
+  background-color: red;
+  color: white;
+}
+
+.benefit.highlighted h3 {
+  color: white;
+}
+
+.benefit.highlighted h4 {
+  color: white;
+}
+
+.benefit.highlighted p {
+  color: white;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  background-color: #e32222;
+  color: white;
+  padding: 2em;
+  text-align: left;
+}
+
+.about-content {
+  width: 60%;
+}
+
+.about-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.about-content p {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.about-buttons .btn {
+  background-color: white;
+  color: #e32222;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.about-buttons .btn:hover {
+  background-color: #e32222;
+  color: white;
+}
+
+.about-images {
+  width: 40%;
+  display: flex;
+  gap: 1em;
+}
+
+.about-images img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.porque {
+  width: 30%;
+  text-align: left;
+  justify-content: center;
 }
