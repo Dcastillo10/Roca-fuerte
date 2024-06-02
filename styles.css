@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1em;
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.navbar .nav-links {
+  display: flex;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #575757;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background-color: #f9f9f9;
+}
+
+.hero img {
+  width: 100vw;
+  border-radius: 20px;
+}
+
+.services {
+  text-align: center;
+  padding: 2em;
+}
+
+.services h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 22%;
+  margin: 1em 0;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+}
